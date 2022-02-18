@@ -1,0 +1,85 @@
+ul {
+  padding: 0px;
+}
+.link {
+  text-decoration: none;
+}
+.navbar {
+  background-color: #1e1e30;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px;
+  align-items: center;
+}
+.covid-head-con {
+  background-color: transparent;
+  border: 0px;
+}
+.head-span {
+  color: blue;
+}
+.covid-main-head {
+  color: white;
+  font-size: 30px;
+  font-family: bree sherif;
+}
+.menu-con {
+  background-color: transparent;
+  border: 0px;
+}
+.ham-menu {
+  height: 40px;
+}
+.popup-con {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1e1e30;
+}
+.home-about-list {
+  list-style-type: none;
+  margin-right: 30px;
+}
+.home-btn {
+  background-color: transparent;
+  border: 0px;
+  color: #94a3b8;
+  font-size: 30px;
+  margin-left: 20px;
+}
+
+.home-btn-light {
+  background-color: transparent;
+  border: 0px;
+  color: #ffff;
+  font-size: 30px;
+}
+.popup-nav {
+  background-color: black;
+  padding: 10px;
+  margin: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.close-con {
+  background-color: transparent;
+  border: 0px;
+  align-self: flex-start;
+  color: white;
+}
+.close {
+  font-size: 30px;
+}
+.above-large-con {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .above-large-con {
+    display: flex;
+    align-items: center;
+  }
+  .menu-con {
+    display: none;
+  }
+}

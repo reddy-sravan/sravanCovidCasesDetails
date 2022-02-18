@@ -1,0 +1,28 @@
+.footer-con {
+  background-color: #161625;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-head {
+  color: white;
+  font-family: bree serif;
+}
+.footer-span {
+  color: blue;
+  margin: 0px;
+  padding: 0px;
+}
+.footer-para {
+  color: #94a3b8;
+  margin: 0px;
+}
+.icons-con {
+  margin: 15px;
+  color: #cbd5e1;
+  display: flex;
+}
+.icon {
+  font-size: 40px;
+  width: 100px;
+}

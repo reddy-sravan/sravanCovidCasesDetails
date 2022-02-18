@@ -1,0 +1,32 @@
+.total-cases-con {
+  display: flex;
+  justify-content: center;
+}
+.home-small-con {
+  padding: 30px;
+}
+.total-card-con {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.confirm-color {
+  color: red;
+  font-size: 20px;
+}
+.confirm-image {
+  height: 90px;
+  width: 120px;
+}
+.active-color {
+  color: #007bff;
+  font-size: 20px;
+}
+.recovered-color {
+  color: #28a745;
+  font-size: 20px;
+}
+.deceased-color {
+  color: #6c757d;
+  font-size: 20px;
+}

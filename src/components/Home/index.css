@@ -1,0 +1,124 @@
+.home-main-con {
+  background-color: #161625;
+  overflow-x: scroll;
+  display: flex;
+  flex-direction: column;
+  width: 99.8vw !important;
+}
+.input-con {
+  margin-top: 20px;
+  width: 60vw;
+  height: 50px;
+  padding: 0px;
+  display: flex;
+  background-color: #2f2f43;
+  align-items: center;
+  border-radius: 10px;
+}
+.search {
+  width: 10%;
+  font-size: 20px;
+  color: #94a3b8;
+}
+.input {
+  height: 48px;
+  margin: 0px;
+  padding: 0px;
+  width: 90%;
+  background-color: transparent;
+  border: 0px;
+  outline: none;
+  color: #94a3b8;
+}
+::placeholder {
+  color: #94a3b8;
+}
+.table {
+  border: 2px solid #94a3b8;
+  margin: 30px;
+  border-radius: 20px;
+  overflow-x: auto;
+  background-color: #2f2f43;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.unorder-states {
+  width: 1500px;
+}
+.table-heading-list {
+  display: flex;
+  justify-content: space-between;
+}
+.table-head {
+  width: 100px;
+  color: white;
+}
+.state-name {
+  width: 100px;
+
+  color: white;
+}
+.confirmed {
+  width: 100px;
+
+  color: #ff073a;
+}
+.active {
+  width: 100px;
+
+  color: #007bff;
+}
+.recovered {
+  width: 100px;
+
+  color: #28a745;
+}
+.deceased {
+  width: 100px;
+
+  color: #94a3b8;
+}
+.population {
+  width: 100px;
+
+  color: #94a3b8;
+}
+.input-main-con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+.search-unorder-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+}
+.loader {
+  background-color: #161625;
+  border: 0px;
+  height: 70vh;
+}
+.asc-desc-con {
+  display: flex;
+  align-items: center;
+  width: 100px;
+  color: white;
+}
+.asc-desc {
+  font-size: 25px;
+  margin-right: 5px;
+}
+.asc-desc-btn {
+  background-color: transparent;
+  border: none;
+}
+@media (min-width: 769px) {
+  .unorder-states {
+    width: 100%;
+  }
+  .input-con {
+    width: 50vw;
+  }
+}
