@@ -1,94 +1,71 @@
 import {Component} from 'react'
-import {Link, withRouter} from 'react-router-dom'
-import {AiFillCloseCircle} from 'react-icons/ai'
+import {Link} from 'react-router-dom'
+import {ImMenu2} from 'react-icons/im'
+
 import './index.css'
 
 class Header extends Component {
-  state = {
-    status: false,
+  state = {isToggleActive: false}
+
+  whenToggleButtonClick = () => {
+    this.setState(prevState => ({isToggleActive: !prevState.isToggleActive}))
   }
 
-  popupclose = () => {
-    this.setState(prevState => ({status: !prevState.status}))
-  }
-
-  renderpopup = () => {
-    const {match} = this.props
-    const {path} = match
-    const route = path.slice(1)
-
-    const homeColor = route !== 'about' ? 'home-btn-light' : 'home-btn'
-    const aboutColor = route === 'about' ? 'home-btn-light' : 'home-btn'
-    return (
-      <li className="popup-con">
-        <div>
-          <Link to="/">
-            <button className={`${homeColor}`} type="button">
-              Home
-            </button>
-          </Link>
-          <Link to="/about">
-            <button className={`${aboutColor}`} type="button">
-              About
-            </button>
-          </Link>
-        </div>
-        <button type="button" className="close-con" onClick={this.popupclose}>
-          <AiFillCloseCircle className="close" />
-        </button>
-      </li>
-    )
-  }
+  showDropDownMenu = () => (
+    <>
+      <ul className="navBar">
+        <Link to="/" className="link">
+          <li className="item">Home</li>
+        </Link>
+        <Link to="/about" className="link">
+          <li className="item">About</li>
+        </Link>
+      </ul>
+    </>
+  )
 
   render() {
-    const {status} = this.state
-    const {match} = this.props
-    const {path} = match
-    const route = path.slice(1)
-
-    const homeColor = route !== 'about' ? 'home-btn-light' : 'home-btn'
-    const aboutColor = route === 'about' ? 'home-btn-light' : 'home-btn'
+    const {isToggleActive} = this.state
+    console.log(isToggleActive)
     return (
       <>
-        <nav>
-          <ul className="navbar">
+        <div className="header-container">
+          <Link to="/" className="link">
+            <h1 className="logo">
+              COVID19<spam className="india">INDIA</spam>
+            </h1>
+          </Link>
+          <ul className="navBar">
             <Link to="/" className="link">
-              <h1 className="covid-main-head">
-                COVID19<span className="head-span">INDIA</span>
+              <li className="item">Home</li>
+            </Link>
+            <Link to="/about" className="link">
+              <li className="item">About</li>
+            </Link>
+          </ul>
+        </div>
+        <div className="mobile-menu">
+          <div className="mobile-header-container">
+            <Link to="/" className="link">
+              <h1 className="logo">
+                COVID19<spam className="india">INDIA</spam>
               </h1>
             </Link>
-            <li>
-              <button
-                className="menu-con"
-                type="button"
-                onClick={this.popupclose}
-              >
-                <img
-                  className="ham-menu"
-                  src="https://res.cloudinary.com/dtkkpth8w/image/upload/v1643854191/menu_dioo5e.png"
-                  alt="menu"
-                />
-              </button>
-            </li>
-
-            <li className="above-large-con">
-              <Link to="/">
-                <button className={`${homeColor}`} type="button">
-                  Home
-                </button>
-              </Link>
-              <Link to="/about">
-                <button className={`${aboutColor}`} type="button">
-                  About
-                </button>
-              </Link>
-            </li>
-          </ul>
-        </nav>
-        {status && this.renderpopup()}
+            <button
+              type="button"
+              className="toggle-button"
+              onClick={this.whenToggleButtonClick}
+            >
+              <ImMenu2 className="menuIcon" alt="menu" />
+            </button>
+          </div>
+          <div className="menu">
+            {isToggleActive ? this.showDropDownMenu() : null}
+          </div>
+        </div>
       </>
     )
   }
 }
 
-export default withRouter(Header)
+export default Header

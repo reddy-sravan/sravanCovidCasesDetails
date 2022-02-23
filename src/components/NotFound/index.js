@@ -1,36 +1,28 @@
-import {Component} from 'react'
-
 import './index.css'
+import {Link} from 'react-router-dom'
+import Navbar from '../Navbar'
 
-class NotFound extends Component {
-  moveToHomeRoute = () => {
-    const {history} = this.props
-    history.replace('/')
-  }
-
-  render() {
-    return (
-      <div className="not-found-route">
-        <img
-          src="https://res.cloudinary.com/dtkkpth8w/image/upload/v1643902826/not_found_gmqxf7.png"
-          alt="not-found-pic"
-          className="not-found-image"
-        />
-        <h1 className="not-found-head">Page Not Found</h1>
-        <p className="not-found-para">
-          we are sorry, the page you requested could not be found
-        </p>
-
-        <button
-          className="not-found-button"
-          type="button"
-          onClick={this.moveToHomeRoute}
-        >
+const NotFound = () => (
+  <div className="not-found-bg">
+    <Navbar />
+    <div className="not-found-container">
+      <img
+        className="not-found-image"
+        src="https://res.cloudinary.com/student-sudheer/image/upload/v1623931254/covid-19/Group_7484_mkuc3u.png"
+        alt="not-found-pic"
+      />
+      <h1 className="not-found-heading">PAGE NOT FOUND</h1>
+      <p className="not-found-desc">
+        we are sorry, the page you requested could not be found
+      </p>
+      <p className="not-found-desc">Please go back to the homepage</p>
+      <Link to="/">
+        <button className="not-found-home-btn" type="button">
           Home
         </button>
-      </div>
-    )
-  }
-}
+      </Link>
+    </div>
+  </div>
+)
 
 export default NotFound

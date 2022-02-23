@@ -1,85 +1,83 @@
-ul {
-  padding: 0px;
+.header-container {
+  width: 100%;
+  height: 80px;
+  background-color: #1e1e30;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 100px;
+  position: fixed;
+  top: 0;
 }
+
+.menuIcon {
+  color: #f8fafc;
+  width: 35px;
+  height: 20px;
+}
+
+.logo {
+  font-family: Bree Serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  color: #f8fafc;
+}
+.india {
+  color: #3b82f6;
+}
+
+.navBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #1e1e30;
+}
+
+.item {
+  list-style: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #f8fafc;
+  margin: 0px 16px;
+}
+
 .link {
   text-decoration: none;
 }
-.navbar {
-  background-color: #1e1e30;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  margin: 0px;
-  align-items: center;
-}
-.covid-head-con {
+
+.toggle-button {
   background-color: transparent;
-  border: 0px;
-}
-.head-span {
-  color: blue;
-}
-.covid-main-head {
-  color: white;
-  font-size: 30px;
-  font-family: bree sherif;
-}
-.menu-con {
-  background-color: transparent;
-  border: 0px;
-}
-.ham-menu {
-  height: 40px;
-}
-.popup-con {
-  display: flex;
-  justify-content: space-between;
-  background-color: #1e1e30;
-}
-.home-about-list {
-  list-style-type: none;
-  margin-right: 30px;
-}
-.home-btn {
-  background-color: transparent;
-  border: 0px;
-  color: #94a3b8;
-  font-size: 30px;
-  margin-left: 20px;
+  outline: none;
+  border: none;
 }
 
-.home-btn-light {
-  background-color: transparent;
-  border: 0px;
-  color: #ffff;
-  font-size: 30px;
-}
-.popup-nav {
-  background-color: black;
-  padding: 10px;
-  margin: 0px;
-  display: flex;
-  justify-content: space-between;
-}
-.close-con {
-  background-color: transparent;
-  border: 0px;
-  align-self: flex-start;
-  color: white;
-}
-.close {
-  font-size: 30px;
-}
-.above-large-con {
+.mobile-header-container {
   display: none;
 }
 
-@media (min-width: 769px) {
-  .above-large-con {
+@media (max-width: 600px) {
+  .mobile-header-container {
+    display: block;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
+    min-height: 80px;
+    background-color: #1e1e30;
+    padding: 0px 10px;
   }
-  .menu-con {
+
+  .header-container {
     display: none;
   }
+}
+.menu {
+  background-color: #1e1e30;
 }

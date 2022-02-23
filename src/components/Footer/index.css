@@ -1,28 +1,42 @@
-.footer-con {
-  background-color: #161625;
+.footer-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #1e1e30;
+  width: 100%;
+  padding: 7px;
+  margin-top: auto;
 }
-.footer-head {
-  color: white;
-  font-family: bree serif;
+
+.logo {
+  font-family: Bree Serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #f8fafc;
+  text-align: center;
 }
-.footer-span {
-  color: blue;
-  margin: 0px;
-  padding: 0px;
+.india {
+  color: #3b82f6;
 }
-.footer-para {
+
+.tagline {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
   color: #94a3b8;
-  margin: 0px;
 }
-.icons-con {
-  margin: 15px;
-  color: #cbd5e1;
-  display: flex;
-}
+
 .icon {
-  font-size: 40px;
-  width: 100px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 45.9233px;
+  line-height: 55px;
+  text-align: center;
+  color: #cbd5e1;
+  margin: 0px 32px;
 }
